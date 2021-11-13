@@ -5,6 +5,9 @@ Nadhif Bhagawanta Hadiprayitno (05111942000029)
 # ANSWER
 
 # PROBLEM 1
+Luffy and Zoro plans to make the map in question using "kriteria" EniesLobby as the DNS Server, Jipangu as the DHCP Server, Water 7 as the Proxy Server
+
+
 First we need to install to Enieslobby as DNS server, Jipangu as DHCP server, and Water7 as Proxy server
 ```
 // in EniesLobby
@@ -34,6 +37,8 @@ INTERFACES="eth0"
 - No problem
 
 # Problem 2
+and then using Foosha as the DHCP relay.
+
 We want to set the foosha as DHCP relay, first we need to install
 ```
 // in Foosha
@@ -52,6 +57,19 @@ eth1 eth2 eth3
 - No Problem
 
 # Problem 3,4,5,6
+To do this, there are some criterias that Luffy and Zoro need to make which is:
+- All clients **must** us the IP configuration from DHCP Server .
+
+-Client has to go through Switch1 and get the range IP from [prefix IP].1.20 - [prefix IP].1.99 and [prefix IP].1.150 - [prefix IP].1.169 
+
+-Client that went through Switch3 gets the range IP from [prefix IP].3.30 - [prefix IP].3.50 
+
+
+-Client that got the DNS from EniesLobby and client can be connected using the internet through that DNS.
+
+-How long the time for the DHCP server to lend the IP Adress to the Client through Switch1 takes 6 minutes, meanwhile the client that goes through Switch3 takes 12 minutes. With the maximum amount of time allocated for the for lending the IP Adress taking 120 minutes.
+
+
 Here we need to setting the subnet in our DHCP server, we can edit the file in `/etc/dhcp/dhcpd.conf`
 ```
 // in Jipangu
@@ -104,6 +122,8 @@ Problem 4, Problem 5
 - No Problem
 
 # Problem 7
+Luffy dan Zoro plans to make Skypie as the server to "jual beli kapal" that it has with an IP Address that's permanent which is IP [prefix IP].3.69
+
 We want to make the skypie ip to be fixed at `192.210.3.69` <br>
 first we need to check the skypie physical address, we check in `ip a`
 ![Skypie hwadd](https://user-images.githubusercontent.com/81411468/141281265-9cd6ddbb-2e19-4e1c-a889-78de91992224.jpg)
