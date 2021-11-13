@@ -151,6 +151,8 @@ Then we can restart the DHCP server using `service isc-dhcp-server restart` and 
 - No Problem
 
 # Problem 8
+In Loguetown, the proxy must be accessible under the name jualbelikapal.yyy.com with the port used is 5000
+
 We want to make the water7 as our proxy server and set it in Loguetown
 
 First we need to edit `squid.conf` file.
@@ -180,6 +182,8 @@ Finally we can run `export http_proxy=http://192.210.2.3:5000` in loguetown and 
 - No Problem
 
 # Problem 9
+In order to make buying and selling transactions more secure and there are two website users, proxy user authentication is installed with MD5 encryption with two usernames, namely luffybelikapalyyy with password luffy_yyy and zorobelikapalyyy with password zoro_yyy
+
 We want to make username and password for using the link.
 
 First we need to input the username and password we want, (using MD5).
@@ -212,6 +216,8 @@ http_access allow USERS
 - No Problem
 
 # Problem 10
+Buying and selling transactions are not carried out every day, therefore internet access is limited and can only be accessed every Monday-Thursday at 07.00-11.00 and every Tuesday-Friday at 17.00-03.00 the next day (until Saturday at 03.00)
+
 We want to make the link can be access in desired time.
 
 First we want to edit `acl.conf` file.
@@ -240,6 +246,8 @@ http_access allow USERS AVAILABLE_WORKING_3
 - Try hard so the syntax not too long
 
 # Problem 11
+In order for the transaction to be more focused on running it, a website redirect is carried out so that it is easy to remember the ship buying and selling website. Every time you access google.com you will be redirected to super.franky.yyy.com with the same website in the issue shift module 2. The super.franky.yyy.com web server is on the Skypie node
+
 We want to make when we open google.com it redirect to super.franky.iup4.com
 
 First we need to edit `named.conf.local` file.
@@ -339,6 +347,10 @@ Finally we need to restart both apache2 ,squid, and bind. Last we need to check 
 
 
 # Problem 12,13
+Time to sail! Luffy and Zoro finally decided to set sail in search of treasure at super.franky.yyy.com. The quest task is divided into two missions, Luffy is in charge of getting the images (.png, .jpg), while Zoro is getting the rest. Because Luffy is a very meticulous person to look for treasure, when he manages to get a picture, he gets a picture and views it at a speed of 10 kbps-> Problem 12
+Meanwhile, Zoro is very eager to find treasure, so Zoro's ship speed is not limited when he gets the treasure he wants-> Problem 13
+
+
 We want to limit the bandwidth when download using luffy username, and not limit the bandwidth when using zoro username
 
 first we need to edit `acl-bandwidth.conf`
