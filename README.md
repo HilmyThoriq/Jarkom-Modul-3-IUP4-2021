@@ -316,7 +316,7 @@ Finally we need to restart both apache2 ,squid, and bind. Last we need to check 
 
 **Difficulties:**
 - At first, confuse to make it redirect. Then using reverse dns to solve the problem.
-- 
+
 
 # Problem 12,13
 We want to limit the bandwidth when download using luffy username, and not limit the bandwidth when using zoro username
